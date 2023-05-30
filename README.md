@@ -66,7 +66,9 @@ True
 
 [SymPy](https://sympy.org) は Python の数式処理ライブラリ．[公式のチュートリアル](https://docs.sympy.org/latest/tutorials)
 
-### 演習：PRSの計算時間
+### 演習：PRSの計算時間[^3]
+
+[^3]:[参考文献：横山和弘.多項式と計算機代数.朝倉書店.2022](https://www.asakura.co.jp/detail.php?book_code=11767)
 
 整数係数の多項式 $f,g$ に対して，ユークリッドの互除法による PRS，原始的 PRS，部分終結式 PRS をそれぞれ求めるプログラムを作成せよ．
 またそれぞれの PRS の計算にかかった時間を実際に計測せよ．
@@ -75,13 +77,13 @@ PRS の計算には以下を用いることが出来る．
 
 - `dup_euclidean_prs(f, g)`
   - 多項式 $f,g$ に対して，ユークリッドの互助法による PRS をリストで返す．
-  [ソース](https://github.com/sympy/sympy/blob/d2be7bacd2604e98a642f74028e8f0d7d6084f78/sympy/polys/euclidtools.py#L194-L231)
+  - [ソースコード](https://github.com/sympy/sympy/blob/d2be7bacd2604e98a642f74028e8f0d7d6084f78/sympy/polys/euclidtools.py#L194-L231)
 - `dup_primitive_prs(f, g)`
   - 多項式 $f,g$ に対して，原始的 PRS をリストで返す．
-  [ソース](https://github.com/sympy/sympy/blob/d2be7bacd2604e98a642f74028e8f0d7d6084f78/sympy/polys/euclidtools.py#L251-L288)
+  - [ソースコード](https://github.com/sympy/sympy/blob/d2be7bacd2604e98a642f74028e8f0d7d6084f78/sympy/polys/euclidtools.py#L251-L288)
 - `dup_prs_resultant(f, g)`
   - 多項式 $f,g$ に対して，第1要素が終結式，第2要素が PRS のリストであるようなタプルを返す．すなわち `dup_prs_resultant(f, g)[1]` で部分終結式 PRS を返す．
-  [ソース](https://github.com/sympy/sympy/blob/d2be7bacd2604e98a642f74028e8f0d7d6084f78/sympy/polys/euclidtools.py#L405-L427)
+  - [ソースコード](https://github.com/sympy/sympy/blob/d2be7bacd2604e98a642f74028e8f0d7d6084f78/sympy/polys/euclidtools.py#L405-L427)
 
 また，Python のプログラムの計算処理時間を計測するには `time.perf_counter` を用いると良い．（[参考文献](https://qiita.com/Nananananamber/items/b9e22d7011404151ca07)）
 
