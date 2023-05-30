@@ -15,7 +15,7 @@
 
 ### 演習：エラトステネスの篩
 
-第4章まで学習したら，[エラトステネスの篩](https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%A9%E3%83%88%E3%82%B9%E3%83%86%E3%83%8D%E3%82%B9%E3%81%AE%E7%AF%A9)を用いて，$n$ 以下の全ての素数を求めるプログラムを作成せよ．
+第4章まで学習したら，[エラトステネスの篩](https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%A9%E3%83%88%E3%82%B9%E3%83%86%E3%83%8D%E3%82%B9%E3%81%AE%E7%AF%A9)を用いて， $n$ 以下の全ての素数を求めるプログラムを作成せよ．
 
 - [解答例1](eratosthenes1.py)
 - [解答例2](eratosthenes2.py)（[参考文献](https://qiita.com/ytaki0801/items/cc58da6eafd3ec4d91ba)）
