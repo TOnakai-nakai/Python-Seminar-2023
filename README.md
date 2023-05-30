@@ -1,43 +1,73 @@
 # Python Seminar 2023
 
-本ページは2023年に[Team SNSC Tsukuba](https://www.math.tsukuba.ac.jp/~snac/)で実施するPython Seminar 2023の内容をまとめたものである．このセミナーでは，プログラミング言語Pythonのインストールと基本的な使いかたを学び，その応用として数式処理ライブラリSymPyに触れる．
+本ページは 2023 年に [Team SNSC Tsukuba](https://www.math.tsukuba.ac.jp/~snac/) で実施する Python Seminar 2023 の内容をまとめたものである．
+このセミナーでは，プログラミング言語 Python のインストールと基本的な使いかたを学び，その応用として数式処理ライブラリ SymPy に触れる．
 
 ## Pythonの基本
 
-[Python Boot Camp](https://pycamp-lp.pycon.jp)の[テキスト](https://pycamp.pycon.jp/textbook/index.html)を使う．Python Boot Campは全国にPythonを広めることを目的とし，チュートリアル講座を実施するイベント．2018年には筑波大学を会場として[Python Boot Camp in 茨城](https://pyconjp.blogspot.com/2018/08/pycamp-in-ibaraki-report.html)も開催されている．
+[Python Boot Camp のテキスト](https://pycamp.pycon.jp/textbook/index.html)を使う．[Python Boot Camp](https://pycamp-lp.pycon.jp) は全国に Python を広めることを目的とし，チュートリアル講座を実施するイベント[^1]．
+
+[^1]:2018 年には筑波大学を会場として [Python Boot Camp in 茨城](https://pyconjp.blogspot.com/2018/08/pycamp-in-ibaraki-report.html)も開催されている．筆者はここで初めて Python に触れた．
 
 テキストは以下の部分を用いる．
 
-- 第4章までの全て．
-- 第5章は主に5.2のみ扱う．ライブラリの理解のために，5.3には少し触れる．
-- 第6章は全て．
-- 第7章はウェブサイトのスクレイピングに関する演習なので，扱わない.
+- 第 4 章までの全て．
+- 第 5 章は主に 5.2 のみ扱う．ライブラリの理解のために，5.3 の代わりに Python 標準ライブラリの 1 つである `math` モジュールを扱う．
+- 第 6 章は全て．
+- 第 7 章はウェブサイトのスクレイピングに関する演習なので，扱わない.
+
+テキストに沿って学習を進め，第 4 章まで進んだら以下の演習問題を解く．
 
 ### 演習：エラトステネスの篩
 
-第4章まで学習したら，[エラトステネスの篩](https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%A9%E3%83%88%E3%82%B9%E3%83%86%E3%83%8D%E3%82%B9%E3%81%AE%E7%AF%A9)を用いて， $n$ 以下の全ての素数を求めるプログラムを作成せよ．
+[エラトステネスの篩](https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%A9%E3%83%88%E3%82%B9%E3%83%86%E3%83%8D%E3%82%B9%E3%81%AE%E7%AF%A9)を用いて， $n$ 以下の全ての素数を求めるプログラムを作成せよ．
 
 - [解答例1](eratosthenes1.py)
 - [解答例2](eratosthenes2.py)（[参考文献](https://qiita.com/ytaki0801/items/cc58da6eafd3ec4d91ba)）
 
+### `math` モジュール
+
+Python の標準ライブラリの 1 つで数学関連の関数を提供している．
+例えば 3 の正の平方根は以下のように求めることができる．
+
+```python
+>>> import math
+>>> x = math.sqrt(3)
+>>> x
+1.7320508075688772
+```
+
+返り値は浮動小数点数であるため，厳密に $\sqrt{3}$ とは一致しない．
+ある誤差を許容して値が近いことを調べるためには，`math.isclose(a, b)` を用いる．
+
+```python
+>>> x**2 == 3
+False
+>>> math.iscolose(x**2, 3)
+True
+```
+
+このような誤差を許容せず，厳密に $\sqrt{3}$ などの代数的数を扱うことができる方法として，数式処理ライブラリの SymPy を紹介する．
+
 ## SymPy
 
-[SymPy](https://sympy.org)はPythonの数式処理ライブラリ．[公式のチュートリアル](https://docs.sympy.org/latest/tutorials)
+[SymPy](https://sympy.org) は Python の数式処理ライブラリ．[公式のチュートリアル](https://docs.sympy.org/latest/tutorials)
 
 ### 演習：PRSの計算時間
 
-整数係数の多項式 $f,g$ に対して，ユークリッドの互除法によるPRS，原始的PRS，部分終結式PRSをそれぞれ求めるプログラムを作成せよ．またそれぞれのPRSの計算にかかった時間を実際に計測せよ．
+整数係数の多項式 $f,g$ に対して，ユークリッドの互除法による PRS，原始的 PRS，部分終結式 PRS をそれぞれ求めるプログラムを作成せよ．
+またそれぞれの PRS の計算にかかった時間を実際に計測せよ．
 
-PRSの計算には以下を用いることが出来る．
+PRS の計算には以下を用いることが出来る．
 
 - `dup_euclidean_prs(f, g)`
-  - 多項式 $f,g$ に対して，ユークリッドの互助法によるPRSをリストで返す．[ドキュメント]
+  - 多項式 $f,g$ に対して，ユークリッドの互助法による PRS をリストで返す．[ドキュメント]
 - `dup_primitive_prs(f, g)`
-  - 多項式 $f,g$ に対して，原始的PRSをリストで返す．[ドキュメント]
+  - 多項式 $f,g$ に対して，原始的 PRS をリストで返す．[ドキュメント]
 - `dup_prs_resultant(f, g)`
-  - 多項式 $f,g$ に対して，第1要素が終結式，第2要素がPRSのリストであるようなタプルを返す．すなわち `dup_prs_resultant(f, g)[1]` で部分終結式PRSを返す．
+  - 多項式 $f,g$ に対して，第1要素が終結式，第2要素が PRS のリストであるようなタプルを返す．すなわち `dup_prs_resultant(f, g)[1]` で部分終結式 PRS を返す．
 
-また，Pythonのプログラムの計算処理時間を計測するには `time.perf_counter` を用いると良い．（[参考文献](https://qiita.com/Nananananamber/items/b9e22d7011404151ca07)）
+また，Python のプログラムの計算処理時間を計測するには `time.perf_counter` を用いると良い．（[参考文献](https://qiita.com/Nananananamber/items/b9e22d7011404151ca07)）
 
 ```python
 import time
