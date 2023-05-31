@@ -85,9 +85,6 @@ PRS の計算には以下を用いることが出来る．
   - 多項式 $f,g$ に対して，第1要素が終結式，第2要素が PRS のリストであるようなタプルを返す．すなわち `dup_prs_resultant(f, g)[1]` で部分終結式 PRS を返す．
   - [ソースコード](https://github.com/sympy/sympy/blob/d2be7bacd2604e98a642f74028e8f0d7d6084f78/sympy/polys/euclidtools.py#L405-L427)
 
-> **Note**
-> `help(dup_euclidean_prs)` で関数のヘルプをみることができる．
-
 また，Python のプログラムの計算処理時間を計測するには `time.perf_counter` を用いると良い．（[参考文献](https://qiita.com/Nananananamber/items/b9e22d7011404151ca07)）
 
 ```python
