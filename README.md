@@ -1,6 +1,6 @@
 # Python Seminar 2023
 
-本ページは 2023 年に [Team SNSC Tsukuba](https://www.math.tsukuba.ac.jp/~snac/) で実施する Python Seminar 2023 の内容をまとめたものである．
+本ページは 2023 年に [Team SNAC Tsukuba](https://www.math.tsukuba.ac.jp/~snac/) で実施する Python Seminar 2023 の内容をまとめたものである．
 このセミナーでは，プログラミング言語 Python のインストールと基本的な使いかたを学び，その応用として数式処理ライブラリ SymPy に触れる．
 
 ## Pythonの基本
