@@ -10,4 +10,4 @@ def eratosthenes(n):
                     list[j-1] = False
     return prime
 
-print(eratosthenes(1000))
+print(eratosthenes(100))
