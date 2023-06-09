@@ -97,3 +97,12 @@ print(end - start)
 ```
 
 - [解答例](prs-time.py)
+
+### 演習：擬除算 PRS アルゴリズム
+
+原始的 PRS を計算する関数 `dup_primitive_prs(f, g)` の
+[ソースコード](https://github.com/sympy/sympy/blob/d2be7bacd2604e98a642f74028e8f0d7d6084f78/sympy/polys/euclidtools.py#L251-L288)を参考に，
+多項式 $f, g$ に対して，擬除算 PRS を計算する関数 `prem_prs` を作成せよ．
+また，上の演習で作成した PRS の計算処理時間を計測するプログラムに，擬除算 PRS も加えよ．
+
+- 解答例（作成中）
