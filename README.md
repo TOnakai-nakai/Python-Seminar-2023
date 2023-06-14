@@ -89,9 +89,9 @@ PRS の計算には以下を用いることが出来る．
 
 ```python
 import time
-start = time.perf_counter
+start = time.perf_counter()
 # 処理
-end = time.perf_counter
+end = time.perf_counter()
 print(end - start)
 # 処理時間出力
 ```
