@@ -76,7 +76,7 @@ True
 PRS の計算には以下を用いることが出来る．
 
 - `dup_euclidean_prs(f, g)`
-  - 多項式 $f,g$ に対して，ユークリッドの互助法による PRS をリストで返す．
+  - 多項式 $f,g$ に対して，ユークリッドの互除法による PRS をリストで返す．
   - [ソースコード](https://github.com/sympy/sympy/blob/d2be7bacd2604e98a642f74028e8f0d7d6084f78/sympy/polys/euclidtools.py#L194-L231)
 - `dup_primitive_prs(f, g)`
   - 多項式 $f,g$ に対して，原始的 PRS をリストで返す．
