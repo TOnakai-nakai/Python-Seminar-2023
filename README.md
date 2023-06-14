@@ -106,3 +106,16 @@ print(end - start)
 また，上の演習で作成した PRS の計算処理時間を計測するプログラムに，擬除算 PRS も加えよ．
 
 - [解答例](prs-time2.py)
+
+## その他の数学に関連する Python ライブラリやソフトウェア
+
+- [NumPy](https://numpy.org/)
+  - 行列などの多次元配列や，それに関連した関数を扱うライブラリ．
+- [SciPy](https://scipy.org/)
+  - 数値解析のためのライブラリ．NumPy を基礎にしている．
+- [Matplotlib](https://matplotlib.org/)
+  - グラフを描画するためのライブラリ．
+- [pandas](https://pandas.pydata.org/)
+  - 表のような形をしたデータの操作や解析のためのライブラリ．
+- [SageMath](https://www.sagemath.org/)
+  - 数学の幅広い処理を Python で使えるソフトウェア．
