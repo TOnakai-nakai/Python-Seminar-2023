@@ -1,6 +1,6 @@
 # Python Seminar 2023
 
-本ページは 2023 年に [Team SNAC Tsukuba](https://www.math.tsukuba.ac.jp/~snac/) で実施する Python Seminar 2023 の内容をまとめたものである．
+本ページは 2023 年に [Team SNAC Tsukuba](https://www.math.tsukuba.ac.jp/~snac/) で実施した Python Seminar 2023 の内容をまとめたものである．
 このセミナーでは，プログラミング言語 Python のインストールと基本的な使いかたを学び，その応用として数式処理ライブラリ SymPy に触れる．
 
 ## Pythonの基本
@@ -40,7 +40,7 @@ $n$ 以下の全ての素数を求めるプログラムを作成せよ．
 
 ### `math` モジュール
 
-Python の標準ライブラリの 1 つで数学関連の関数を提供している．
+math モジュールは，Python の標準ライブラリの 1 つで数学関連の関数を提供している．
 例えば 3 の正の平方根は以下のように求めることができる．
 
 ```python
