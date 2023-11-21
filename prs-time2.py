@@ -4,7 +4,7 @@ import time
 
 # 擬除算 PRS を求める関数
 def prem_prs(f, g, K):
-    prs = [f, g]
+    prs = []
     h = dup_prem(f, g, K)
 
     while h:
